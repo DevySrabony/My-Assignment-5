@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./assets/board.png" type="image/x-icon">
+     <!-- Daisy UI -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-16 space-y-7 bg-rose-50">
+    <header class="h-24 bg-stone-100 rounded-2xl">
+        <nav class="py-5 px-12">
+           <div class="flex justify-between">
+            <div class="flex items-center">
+                <img src="./assets/logo.png" alt="">
+                <h1 class="text-3xl"><span class="font-light">Dev</span><span class="font-extrabold">Board</span></h1>
+            </div>
+            <div>
+                <button id="back" class="btn bg-blue-400 border-none text-white font-medium">Back to Desk</button>
+            </div>
+           </div>
+        </nav>
+    </header>
+    <main>
+      <h1 class="text-3xl font-bold text-center my-4">Blogs</h1>
+        <div class="space-y-5 w-full">
+            <div class="collapse collapse-arrow join-item border-base-300 border p-5">
+              <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-medium">Question-1: What are the different ways to select an element in the DOM?</div>
+
+              <div class="collapse-content">
+                <hr class="w-full border-dashed border-t-2 border-gray-400 my-3">
+                <p>There are several ways to grab an element from the DOM</p>
+                <ul>
+                    <ol>getElementById('id')</ol>
+                    <ol>getElementsByClassName('class')</ol>
+                    <ol>getElementsByTagName('tag')</ol>
+                    <ol>querySelector('selector')</ol>
+                    <ol>querySelectorAll('selector')</ol>
+                </ul>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border p-5">
+              <input type="radio" name="my-accordion-4" checked="checked"/>
+              <div class="collapse-title text-xl font-medium">Question-2: What is the difference between innerHTML, innerText, and textContent ?</div>
+              <div class="collapse-content">
+                <hr class="w-full border-dashed border-t-2 border-gray-400 my-3">
+                <p>
+                    `innerHTML` gets or sets content, including HTML tags. `innerText` retrieves only the **visible** text, ignoring hidden elements. `textContent` gets all text, including hidden ones, but treats HTML as plain text.
+                </p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border p-5">
+              <input type="radio" name="my-accordion-4" checked="checked"/>
+              <div class="collapse-title text-xl font-medium">Question-3: What is event delegation in the DOM?</div>
+              <div class="collapse-content">
+                <hr class="w-full border-dashed border-t-2 border-gray-400 my-3">
+                <p>
+                    Event delegation is a technique where I **attach a single event listener** to a parent element instead of multiple child elements. 
+                    This works because events **bubble up** from the target element to its ancestors. 
+                    It helps improve performance and makes handling dynamic elements easier.
+                </p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border p-5">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">Question-4: What is event bubbling in the DOM?</div>
+              <div class="collapse-content">
+                <hr class="w-full border-dashed border-t-2 border-gray-400  my-3">
+                <p>
+                    Event bubbling is when an event starts from the element that was clicked and moves **upward** through its parent elements. For example, if i click a button inside a div, the event first happens on the button, then "bubbles up" to the div, then to the body, and so on. This helps in handling events at a higher level instead of adding listeners to every small element.
+                </p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border p-5">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">Question-5: How do you create, add, and remove elements using JavaScript?</div>
+              <div class="collapse-content">
+                <hr class="w-full border-dashed border-t-2 border-gray-400  my-3">
+                To create an element in JavaScript, I use document.createElement('tagName'). To add it to the page, I can use .appendChild() or .append() on a parent element. To remove an element, I use .remove() on the element itself.
+              </div>
+            </div>
+          </div>
+    </main>
+    <script src="./new.js"></script>
+</body>
+</html>

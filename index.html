@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <link rel="shortcut icon" href="./assets/board.png" type="image/x-icon">
+    <!-- Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Style -->
+     <style>
+        .poppins {
+            font-family: "Poppins", sans-serif;
+        }
+        .bg{
+        background: linear-gradient(130.7deg, rgb(55, 82, 253) 0.419%, rgb(108, 127, 250) 52.66%, rgb(155, 168, 248) 99.733%);
+        }
+        .log-entry-bg {
+        background-color: #f0f0f0;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        
+        }
+
+     </style>
+</head>
+<body class="poppins p-16">
+    <header class="h-24 bg-white border border-gray-300 rounded-2xl">
+        <nav class="p-5">
+           <div class="flex justify-between">
+            <div class="flex items-center gap-2">
+                <img src="./assets/logo.png" alt="">
+                <h1 class="text-3xl"><span class="font-light">Dev</span><span class="font-extrabold">Board</span></h1>
+            </div>
+            <div class="flex gap-4 ">
+                <button class="flex items-center btn rounded-3xl bg-slate-100">
+                    <img src="./assets/checkbox.png" alt="">
+                    <h4 id="btn-h4" class="font-extrabold text-lg">23</h4>
+                </button>
+                <button id="theme" class="btn rounded-full">
+                    <img class="h-6" src="/assets/theme-btn.png" alt="">
+                </button>
+            </div>
+           </div>
+        </nav>
+    </header>
+    <main>
+        <div class="my-7 flex gap-4">
+        <!-- Left -->
+        <div class="w-2/3 border border-gray-300 p-4 rounded-2xl bg-white">
+            <!-- first row -->
+          <div class="flex gap-5">
+              <!-- First -->
+              <div class="w-1/3 flex gap-3 border items-center rounded-xl p-3 bg-[#F4F7FF]">
+                <div>
+                  <button class="btn bg-white rounded-full ">
+                      <img  src="./assets/checkbox.png"
+                      class="h-6 w-6" alt="">
+                    </button>
+                </div>
+                   <div>
+                   <h6 class="text-base font-medium">Task Assigned</h6>
+                   <h4 id="decrement">06</h4>
+                   </div>
+              </div>
+              <!-- Middle -->
+              <div id="discover" class="w-2/3 bg gap-4 flex items-center py-3 px-12 rounded-xl text-white">
+                  <div>
+                      <img src="./assets/board.png" alt="">
+                  </div>
+                  <div class="w-2/4">
+                      <p>Discover Something New Today!</p>
+                  </div>
+              </div>
+              <!-- last -->
+              <div class="w-1/3 flex justify-center items-center gap-3 border p-3 rounded-xl bg-[#F4F7FF]">
+                <div >
+                    <img src="./assets/calender.png" alt="">
+                </div>
+                <div id="live-calendar" 
+                class="text-lg font-bold w-2/3"></div>
+          </div>
+        </div>
+        <div class="my-5">
+            <hr class=" border-dashed border-gray-400">
+        </div>
+        <!-- second row -->
+         <div class="grid grid-cols-3 gap-4">
+            <div class="task-card bg-[#F4F7FF] p-7 rounded-lg space-y-2">
+                <button class="p-2 rounded-lg bg-white">ShopEase</button>
+                <h3 class="text-lg font-medium">Fix Mobile Button Issue</h3>
+               <div class="rounded-sm p-2 bg-white">
+                <p class="text-sm text-gray-500 font-light">Debug using Chrome DevTools, check for overlapping elements,
+                    and ensure onClick works properly.</p>
+               </div>
+               <div class="my-3">
+                <hr class="border-dashed border-gray-500 ">
+               </div>
+               <div class="flex justify-between">
+                <div>
+                    <h6 class=" text-gray-600 font-light">Deadline</h6>
+                    <h5 class="text-base font-medium">21 March 2025</h5>
+                </div>
+                <div>
+                    <button class="first-func btn text-white bg-[#3752FD]" >Completed</button>
+                </div>
+               </div>
+            </div>
+            <div class="task-card bg-[#F4F7FF] p-7 rounded-lg space-y-2">
+                <button class="p-2 rounded-lg bg-white">CloudSync</button>
+                <h3 class="text-lg font-medium">Add Dark Mode</h3>
+               <div class="rounded-sm p-2 bg-white">
+                <p class="text-sm text-gray-500 font-light">Debug using Chrome DevTools, check for overlapping elements,
+                    and ensure onClick works properly.</p>
+               </div>
+               <div class="my-3">
+                <hr class="border-dashed border-gray-500 ">
+               </div>
+               <div class="flex justify-between">
+                <div>
+                    <h6 class=" text-gray-600 font-light">Deadline</h6>
+                    <h5 class="text-base font-medium">21 March 2025</h5>
+                </div>
+                <div>
+                    <button class="first-func btn text-white bg-[#3752FD]">Completed</button>
+                </div>
+               </div>
+            </div>
+            <div class="task-card bg-[#F4F7FF] p-7 rounded-lg space-y-2">
+                <button class="p-2 rounded-lg bg-white">SwiftPay</button>
+                <h3 class="text-lg font-medium">Optimize Home Page</h3>
+               <div class="rounded-sm p-2 bg-white">
+                <p class="text-sm text-gray-500 font-light">Debug using Chrome DevTools, check for overlapping elements,
+                    and ensure onClick works properly.</p>
+               </div>
+               <div class="my-3">
+                <hr class="border-dashed border-gray-500 ">
+               </div>
+               <div class="flex justify-between">
+                <div>
+                    <h6 class=" text-gray-600 font-light">Deadline</h6>
+                    <h5 class="text-base font-medium">21 March 2025</h5>
+                </div>
+                <div>
+                    <button class="first-func btn text-white bg-[#3752FD]">Completed</button>
+                </div>
+               </div>
+            </div>
+            <div class="task-card bg-[#F4F7FF] p-7 rounded-lg space-y-2">
+                <button class="p-2 rounded-lg bg-white">Meta</button>
+                <h3 class="text-lg font-medium">Add New Emoji🤲</h3>
+               <div class="rounded-sm p-2 bg-white">
+                <p class="text-sm text-gray-500 font-light">Debug using Chrome DevTools, check for overlapping elements,
+                    and ensure onClick works properly.</p>
+               </div>
+               <div class="my-3">
+                <hr class="border-dashed border-gray-500 ">
+               </div>
+               <div class="flex justify-between">
+                <div>
+                    <h6 class=" text-gray-600 font-light">Deadline</h6>
+                    <h5 class="text-base font-medium"">21 March 2025</h5>
+                </div>
+                <div>
+                    <button class="first-func btn text-white bg-[#3752FD]">Completed</button>
+                </div>
+               </div>
+            </div>
+            <div class="task-card bg-[#F4F7FF] p-7 rounded-lg space-y-2">
+                <button class="p-2 rounded-lg bg-white">Google LLC</button>
+                <h3 class="text-lg font-medium">Integrate OpenAI API</h3>
+               <div class="rounded-sm p-2 bg-white">
+                <p class="text-sm text-gray-500 font-light">Debug using Chrome DevTools, check for overlapping elements,
+                    and ensure onClick works properly.</p>
+               </div>
+               <div class="my-3">
+                <hr class="border-dashed border-gray-500 ">
+               </div>
+               <div class="flex justify-between">
+                <div>
+                    <h6 class=" text-gray-600 font-light">Deadline</h6>
+                    <h5 class="text-base font-medium">21 March 2025</h5>
+                </div>
+                <div>
+                    <button class="first-func btn text-white bg-[#3752FD]">Completed</button>
+                </div>
+               </div>
+            </div>
+            <div class="task-card bg-[#F4F7FF] p-7 rounded-lg space-y-2">
+                <button class="p-2 rounded-lg bg-white">Glassdoar</button>
+                <h3 class="text-lg font-medium">Improve Job searching</h3>
+               <div class="rounded-sm p-2 bg-white">
+                <p class="text-sm text-gray-500 font-light">Debug using Chrome DevTools, check for overlapping elements,
+                    and ensure onClick works properly.</p>
+               </div>
+               <div class="my-3">
+                <hr class="border-dashed border-gray-500 ">
+               </div>
+               <div class="flex justify-between">
+                <div>
+                    <h6 class=" text-gray-600 font-light">Deadline</h6>
+                    <h5 class="text-base font-medium">21 March 2025</h5>
+                </div>
+                <div>
+                    <button  class="first-func btn text-white bg-[#3752FD]">Completed</button>
+                </div>
+               </div>
+            </div>
+         </div>
+       
+        </div>
+         <!-- Right -->
+         <div class="border bg-white p-4 rounded-2xl border-gray-300 w-1/3 flex flex-col items-center space-y-4">
+           <div class="flex gap-4">
+            <img src="./assets/activity.png" alt="">
+            <h3 class="font-semibold">Activity Log</h3>
+           </div>
+           
+            <div>
+                <button id="clear-history" class="btn text-white bg-[#3752FD]">Clear History</button>
+            </div>
+            <hr class="w-full border-dashed border-t-2 border-gray-400 ">
+            <div id="activity-log" class="flex flex-col space-y-4">
+
+            </div>
+            
+         </div>
+         </div>
+       
+    </main>
+  <script src="./script.js"></script>
+  <script src="./theme.js"></script>
+  <script>
+    function updateCalendar() {
+        const now = new Date();
+        const options = { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric' };
+        let formattedDate = now.toLocaleDateString('en-US', options).replace(',', '');
+        
+        document.getElementById("live-calendar").innerText = formattedDate;
+    }
+    
+    setInterval(updateCalendar, 1000); 
+    updateCalendar(); 
+    </script>  
+</body>
+</html>
